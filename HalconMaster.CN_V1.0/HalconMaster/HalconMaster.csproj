@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0-windows</TargetFramework>
+        <Nullable>enable</Nullable>
+        <UseWPF>true</UseWPF>
+        <ImplicitUsings>enable</ImplicitUsings>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\HalconMaster.Base\HalconMaster.Base.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Update="Assets\logo\logo.ico">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+      <None Update="modules.config">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="Assets\SplashScreenResource\startSplashScreen.jpg" />
+      <Resource Include="Assets\SplashScreenResource\startSplashScreen.jpg" />
+    </ItemGroup>
+
+</Project>

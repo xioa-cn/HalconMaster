@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0-windows</TargetFramework>
+        <Nullable>enable</Nullable>
+        <UseWPF>true</UseWPF>
+        <ImplicitUsings>enable</ImplicitUsings>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\HalconMaster.Base.Dll\HalconMaster.Base.Dll.csproj" />
+      <ProjectReference Include="..\HalconMaster.Common.Model\HalconMaster.Common.Model.csproj" />
+    </ItemGroup>
+
+</Project>

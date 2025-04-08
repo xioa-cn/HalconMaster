@@ -1,0 +1,63 @@
+﻿<Window
+    x:Class="HalconMaster.Views.SplashScreen"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:HalconMaster.Views"
+    xmlns:logo="clr-namespace:HalconMaster.Common.Controls.Controls;assembly=HalconMaster.Common.Controls"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="HalconMaster"
+    Width="800"
+    Height="450"
+    AllowsTransparency="True"
+    Background="Transparent"
+    ShowInTaskbar="False"
+    WindowStartupLocation="CenterScreen"
+    WindowStyle="None"
+    mc:Ignorable="d">
+    <WindowChrome.WindowChrome>
+        <WindowChrome CaptionHeight="10" GlassFrameThickness="1" />
+    </WindowChrome.WindowChrome>
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/HalconMaster.Common.Themes;component/Themes/SplashScreenThemes/SplashScreenTheme.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Border CornerRadius="8">
+        <Border.Background>
+            <ImageBrush ImageSource="../Assets/SplashScreenResource/startSplashScreen.jpg" />
+        </Border.Background>
+        <Border Margin="10" CornerRadius="8">
+            <Border.Background>
+                <SolidColorBrush Opacity="0.3" Color="#FFF" />
+            </Border.Background>
+            <Grid>
+
+
+                <logo:HalconLogoSVG
+                    Width="200"
+                    Height="50"
+                    Margin="10"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top" />
+                <TextBlock
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    FontFamily="Comic Sans MS"
+                    FontSize="55"
+                    FontWeight="Bold"
+                    Foreground="#11C2CB"
+                    Text="HalconMaster V1.0_CN" />
+                <TextBlock
+                    Margin="10"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Bottom"
+                    FontWeight="Bold"
+                    Foreground="#FFF"
+                    Text="2025 © XIOA-ADMIN BY XIOA TEAM." />
+            </Grid>
+        </Border>
+    </Border>
+</Window>
