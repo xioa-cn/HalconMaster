@@ -5,6 +5,8 @@
         <ResourceDictionary
             Source="pack://application:,,,/HalconMaster.Common.Themes;component/Generic.xaml">
         </ResourceDictionary>
+        <ResourceDictionary 
+            Source="pack://application:,,,/HalconMaster.Common.Lang;component/Generic.xaml"></ResourceDictionary>
     </ResourceDictionary.MergedDictionaries>
 
 </ResourceDictionary>
