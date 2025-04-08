@@ -1,5 +1,7 @@
 ﻿using System.Reflection;
 using System.Windows;
+using HalconMaster.Common.Lang;
+using HalconMaster.Common.Model.LangModels;
 using HalconMaster.Common.Model.StartupModels;
 using HalconMaster.Common.Services.StartupServices;
 using HalconMaster.Common.Tools.DispatcherTools;
@@ -16,6 +18,7 @@ public partial class Startup(Application application) : IAppStartup {
     private Application App { get; set; } = application;
 
     public void OnStartUp(StartupEventArgs e) {
+        LangManager.SetLanguage(SystemLanguage.ZhCn);
         SystemTheme(); 
         Detect(); 
         DispatcherHelper.Initialize();
