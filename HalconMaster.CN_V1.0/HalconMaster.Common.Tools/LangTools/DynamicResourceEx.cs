@@ -16,9 +16,16 @@ public class DynamicResourceEx : DynamicResourceExtension {
         if (
             !resources.Contains(ResourceKey))
         {
-            var fallbackDict = new ResourceDictionary { { ResourceKey, FallbackValue } };
-            Application.Current.Resources.MergedDictionaries.Add(fallbackDict);
-            
+            if (FallbackValue is string fallbackValue)
+            {
+                var fallbackDict = new ResourceDictionary { { ResourceKey, FallbackValue } };
+                Application.Current.Resources.MergedDictionaries.Add(fallbackDict);
+            }
+            else
+            {
+                // 仅支持string 类型默认值
+                throw new TypeUnloadedException(nameof(FallbackValue));
+            }
         }
 
         var value = base.ProvideValue(serviceProvider);
