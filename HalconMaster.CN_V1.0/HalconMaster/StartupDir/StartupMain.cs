@@ -6,6 +6,7 @@ using HalconMaster.Common.Model.StartupModels;
 using HalconMaster.Common.Services.StartupServices;
 using HalconMaster.Common.Tools.DispatcherTools;
 using HalconMaster.Common.Tools.WindowsThemeTools;
+using HalconMaster.ViewModels;
 using HalconMaster.Views;
 using XPrism.Core.DataContextWindow;
 using XPrism.Core.DI;
@@ -30,7 +31,8 @@ public partial class Startup(Application application) : IAppStartup {
             DispatcherHelper.CheckBeginInvokeOnUI(() =>
             {
                 ContainerLocator.Container.RegisterTransient<LoginWindow>();
-                ContainerLocator.Container.RegisterEventAggregator<EventAggregator>(); 
+                ContainerLocator.Container.RegisterEventAggregator<EventAggregator>();
+                ContainerLocator.Container.RegisterSingleton<LoginWindowViewModel>();
                 ContainerLocator.Container.AutoRegisterByAttribute(
                     Assembly.Load("HalconMaster")); 
                 ContainerLocator.Container

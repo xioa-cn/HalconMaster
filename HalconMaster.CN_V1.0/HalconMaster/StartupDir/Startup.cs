@@ -2,6 +2,7 @@
 using HalconMaster.Base.Configs.SystemConfigs;
 using HalconMaster.Common.Model.StartupModels;
 using HalconMaster.Common.Tools.WindowsThemeTools;
+using HalconMaster.ViewModels;
 using HalconMaster.Views;
 using HandyControl.Controls;
 using XPrism.Core.DI;
@@ -24,7 +25,11 @@ public partial class Startup {
         {
             case IndexStatus.Login:
             {
+                
+                var vm = XPrismIoc.Fetch<LoginWindowViewModel>();
                 var login = XPrismIoc.Fetch<LoginWindow>();
+                if (login is null) throw new ArgumentNullException(nameof(LoginWindow));
+                login.DataContext = vm;
                 splashScreen.SwitchWindow(login);
                 WeakReferenceMessenger.Default.Register<UseIcon>(this, OpenIcon);
                 break;

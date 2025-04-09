@@ -13,15 +13,16 @@
     Background="Transparent"
     ShowInTaskbar="False"
     WindowStartupLocation="CenterScreen"
-    WindowStyle="None"
+    WindowStyle="None" 
     mc:Ignorable="d">
     <WindowChrome.WindowChrome>
-        <WindowChrome CaptionHeight="10" GlassFrameThickness="1" />
+        <WindowChrome CaptionHeight="0" GlassFrameThickness="1" />
     </WindowChrome.WindowChrome>
     <Window.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="pack://application:,,,/HalconMaster.Common.Themes;component/Themes/SplashScreenThemes/SplashScreenTheme.xaml" />
+                <ResourceDictionary
+                    Source="pack://application:,,,/HalconMaster.Common.Themes;component/Themes/SplashScreenThemes/SplashScreenTheme.xaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Window.Resources>
