@@ -2,5 +2,6 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:sys="clr-namespace:System;assembly=System.Runtime.CompilerServices.VisualC">
     <sys:String x:Key="LoginTitle">Login</sys:String>
+    <sys:String x:Key="LoginTitle1">Login</sys:String>
     <sys:String x:Key="Login">Login</sys:String>
 </ResourceDictionary>

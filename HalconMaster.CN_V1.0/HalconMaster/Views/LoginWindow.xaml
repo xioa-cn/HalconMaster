@@ -5,8 +5,17 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:local="clr-namespace:HalconMaster.Views"
         mc:Ignorable="d" WindowStartupLocation="CenterScreen"
-        Title="{DynamicResource LoginTitle}" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        xmlns:tools="clr-namespace:HalconMaster.Common.Tools.LangTools;assembly=HalconMaster.Common.Tools"
+        Title="{tools:DynamicResourceEx LoginTitle1,FallbackValue=标题}" Height="450" Width="800">
+
+    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+        <Button Height="100" Margin="10" Click="ButtonBase_OnClick"
+                Width="200" Background="Red">
+            load
+        </Button>
+        <Button Height="100" Margin="10" Click="ButtonBase1_OnClick"
+                Width="200" Background="Red">
+            load
+        </Button>
+    </StackPanel>
 </Window>
