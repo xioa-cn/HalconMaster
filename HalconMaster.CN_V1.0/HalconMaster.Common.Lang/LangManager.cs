@@ -5,7 +5,8 @@ using HalconMaster.Common.Model.LangModels;
 namespace HalconMaster.Common.Lang;
 
 public class LangManager {
-    public static LangManager Instance { get; set; } = new LangManager();
+    private static LangManager? _instance;
+    public static LangManager Instance => _instance ??= new LangManager();
 
     private LangManager() {
     }
@@ -33,7 +34,7 @@ public class LangManager {
     }
 
 
-    private void SetLanguage(SystemLanguage lang) {
+    private static void SetLanguage(SystemLanguage lang) {
         var resources = Application.Current.Resources.MergedDictionaries;
 
         var findResources = resources.Where(

@@ -4,13 +4,14 @@ using System.Windows.Controls;
 using System.Windows.Media;
 using CommunityToolkit.Mvvm.ComponentModel;
 using HalconMaster.Common.Model;
+using HalconMaster.Common.Model.ThemeModels;
 
 namespace HalconMaster.Common.Themes;
 
 public partial class ThemeManager : BindableBase {
     private static ThemeManager? _instance;
     public static ThemeManager Instance => _instance ??= new ThemeManager();
-
+    public event ThemeEventHandler? ThemeChanged;
     private ThemeManager() {
         // 默认使用深色主题
         IsDarkTheme = false;
@@ -81,8 +82,13 @@ public partial class ThemeManager : BindableBase {
             // 更新窗口背景
             UpdateWindowBackground();
         });
+        var nowTheme =  IsDarkTheme ? ThemesEnum.Dark : ThemesEnum.Light;
+        ThemeChanged?.Invoke(this,new ThemeEventArgs(nowTheme
+            ,_oldTheme
+            ));
+        _oldTheme = nowTheme;
     }
-
+    private ThemesEnum? _oldTheme;
     private void UpdateWindowBackground() {
         if (Application.Current.MainWindow?.Template.FindName("MainBorder",
                 Application.Current.MainWindow) is Border border)
