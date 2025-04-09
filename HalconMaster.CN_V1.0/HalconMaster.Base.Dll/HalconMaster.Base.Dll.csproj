@@ -10,6 +10,11 @@
     <ItemGroup>
       <PackageReference Include="HandyControl" Version="3.5.1" />
       <PackageReference Include="Hardcodet.NotifyIcon.Wpf" Version="2.0.1" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.15" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite.Core" Version="8.0.15" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.15" />
+      <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="8.0.11" />
+      <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="8.0.3" />
       <PackageReference Include="SharpVectors" Version="1.8.4.2" />
       <PackageReference Include="XPrism.Core.wpf" Version="1.1.4" />
       <PackageReference Include="XSharedMemoryPubSub" Version="1.0.0" />

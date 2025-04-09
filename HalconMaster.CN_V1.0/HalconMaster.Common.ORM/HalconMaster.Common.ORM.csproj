@@ -8,13 +8,8 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\HalconMaster.Base.Configs\HalconMaster.Base.Configs.csproj" />
-      <ProjectReference Include="..\HalconMaster.Common.Controls\HalconMaster.Common.Controls.csproj" />
-      <ProjectReference Include="..\HalconMaster.Common.Lang\HalconMaster.Common.Lang.csproj" />
       <ProjectReference Include="..\HalconMaster.Common.Model\HalconMaster.Common.Model.csproj" />
-      <ProjectReference Include="..\HalconMaster.Common.ORM\HalconMaster.Common.ORM.csproj" />
       <ProjectReference Include="..\HalconMaster.Common.Services\HalconMaster.Common.Services.csproj" />
-      <ProjectReference Include="..\HalconMaster.Common.Themes\HalconMaster.Common.Themes.csproj" />
       <ProjectReference Include="..\HalconMaster.Common.Tools\HalconMaster.Common.Tools.csproj" />
     </ItemGroup>
 

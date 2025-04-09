@@ -1,0 +1,423 @@
+{
+  "format": 1,
+  "restore": {
+    "F:\\git\\HalconMaster\\HalconMaster.CN_V1.0\\HalconMaster.Common.ORM\\HalconMaster.Common.ORM.csproj": {}
+  },
+  "projects": {
+    "F:\\git\\HalconMaster\\HalconMaster.CN_V1.0\\HalconMaster.Base.Dll\\HalconMaster.Base.Dll.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "F:\\git\\HalconMaster\\HalconMaster.CN_V1.0\\HalconMaster.Base.Dll\\HalconMaster.Base.Dll.csproj",
+        "projectName": "HalconMaster.Base.Dll",
+        "projectPath": "F:\\git\\HalconMaster\\HalconMaster.CN_V1.0\\HalconMaster.Base.Dll\\HalconMaster.Base.Dll.csproj",
+        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
+        "outputPath": "F:\\git\\HalconMaster\\HalconMaster.CN_V1.0\\HalconMaster.Base.Dll\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "E:\\SDK\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0-windows"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0-windows7.0": {
+            "targetAlias": "net8.0-windows",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.200"
+      },
+      "frameworks": {
+        "net8.0-windows7.0": {
+          "targetAlias": "net8.0-windows",
+          "dependencies": {
+            "HandyControl": {
+              "target": "Package",
+              "version": "[3.5.1, )"
+            },
+            "Hardcodet.NotifyIcon.Wpf": {
+              "target": "Package",
+              "version": "[2.0.1, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.15, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[8.0.15, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite.Core": {
+              "target": "Package",
+              "version": "[8.0.15, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[8.0.11, )"
+            },
+            "Pomelo.EntityFrameworkCore.MySql": {
+              "target": "Package",
+              "version": "[8.0.3, )"
+            },
+            "SharpVectors": {
+              "target": "Package",
+              "version": "[1.8.4.2, )"
+            },
+            "XPrism.Core.wpf": {
+              "target": "Package",
+              "version": "[1.1.4, )"
+            },
+            "XSharedMemoryPubSub": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WPF": {
+              "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "F:\\git\\HalconMaster\\HalconMaster.CN_V1.0\\HalconMaster.Common.Model\\HalconMaster.Common.Model.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "F:\\git\\HalconMaster\\HalconMaster.CN_V1.0\\HalconMaster.Common.Model\\HalconMaster.Common.Model.csproj",
+        "projectName": "HalconMaster.Common.Model",
+        "projectPath": "F:\\git\\HalconMaster\\HalconMaster.CN_V1.0\\HalconMaster.Common.Model\\HalconMaster.Common.Model.csproj",
+        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
+        "outputPath": "F:\\git\\HalconMaster\\HalconMaster.CN_V1.0\\HalconMaster.Common.Model\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "E:\\SDK\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0-windows"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0-windows7.0": {
+            "targetAlias": "net8.0-windows",
+            "projectReferences": {
+              "F:\\git\\HalconMaster\\HalconMaster.CN_V1.0\\HalconMaster.Base.Dll\\HalconMaster.Base.Dll.csproj": {
+                "projectPath": "F:\\git\\HalconMaster\\HalconMaster.CN_V1.0\\HalconMaster.Base.Dll\\HalconMaster.Base.Dll.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.200"
+      },
+      "frameworks": {
+        "net8.0-windows7.0": {
+          "targetAlias": "net8.0-windows",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WPF": {
+              "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "F:\\git\\HalconMaster\\HalconMaster.CN_V1.0\\HalconMaster.Common.ORM\\HalconMaster.Common.ORM.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "F:\\git\\HalconMaster\\HalconMaster.CN_V1.0\\HalconMaster.Common.ORM\\HalconMaster.Common.ORM.csproj",
+        "projectName": "HalconMaster.Common.ORM",
+        "projectPath": "F:\\git\\HalconMaster\\HalconMaster.CN_V1.0\\HalconMaster.Common.ORM\\HalconMaster.Common.ORM.csproj",
+        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
+        "outputPath": "F:\\git\\HalconMaster\\HalconMaster.CN_V1.0\\HalconMaster.Common.ORM\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "E:\\SDK\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0-windows"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0-windows7.0": {
+            "targetAlias": "net8.0-windows",
+            "projectReferences": {
+              "F:\\git\\HalconMaster\\HalconMaster.CN_V1.0\\HalconMaster.Common.Model\\HalconMaster.Common.Model.csproj": {
+                "projectPath": "F:\\git\\HalconMaster\\HalconMaster.CN_V1.0\\HalconMaster.Common.Model\\HalconMaster.Common.Model.csproj"
+              },
+              "F:\\git\\HalconMaster\\HalconMaster.CN_V1.0\\HalconMaster.Common.Services\\HalconMaster.Common.Services.csproj": {
+                "projectPath": "F:\\git\\HalconMaster\\HalconMaster.CN_V1.0\\HalconMaster.Common.Services\\HalconMaster.Common.Services.csproj"
+              },
+              "F:\\git\\HalconMaster\\HalconMaster.CN_V1.0\\HalconMaster.Common.Tools\\HalconMaster.Common.Tools.csproj": {
+                "projectPath": "F:\\git\\HalconMaster\\HalconMaster.CN_V1.0\\HalconMaster.Common.Tools\\HalconMaster.Common.Tools.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.200"
+      },
+      "frameworks": {
+        "net8.0-windows7.0": {
+          "targetAlias": "net8.0-windows",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WPF": {
+              "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "F:\\git\\HalconMaster\\HalconMaster.CN_V1.0\\HalconMaster.Common.Services\\HalconMaster.Common.Services.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "F:\\git\\HalconMaster\\HalconMaster.CN_V1.0\\HalconMaster.Common.Services\\HalconMaster.Common.Services.csproj",
+        "projectName": "HalconMaster.Common.Services",
+        "projectPath": "F:\\git\\HalconMaster\\HalconMaster.CN_V1.0\\HalconMaster.Common.Services\\HalconMaster.Common.Services.csproj",
+        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
+        "outputPath": "F:\\git\\HalconMaster\\HalconMaster.CN_V1.0\\HalconMaster.Common.Services\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "E:\\SDK\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0-windows"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0-windows7.0": {
+            "targetAlias": "net8.0-windows",
+            "projectReferences": {
+              "F:\\git\\HalconMaster\\HalconMaster.CN_V1.0\\HalconMaster.Base.Dll\\HalconMaster.Base.Dll.csproj": {
+                "projectPath": "F:\\git\\HalconMaster\\HalconMaster.CN_V1.0\\HalconMaster.Base.Dll\\HalconMaster.Base.Dll.csproj"
+              },
+              "F:\\git\\HalconMaster\\HalconMaster.CN_V1.0\\HalconMaster.Common.Model\\HalconMaster.Common.Model.csproj": {
+                "projectPath": "F:\\git\\HalconMaster\\HalconMaster.CN_V1.0\\HalconMaster.Common.Model\\HalconMaster.Common.Model.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.200"
+      },
+      "frameworks": {
+        "net8.0-windows7.0": {
+          "targetAlias": "net8.0-windows",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WPF": {
+              "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "F:\\git\\HalconMaster\\HalconMaster.CN_V1.0\\HalconMaster.Common.Tools\\HalconMaster.Common.Tools.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "F:\\git\\HalconMaster\\HalconMaster.CN_V1.0\\HalconMaster.Common.Tools\\HalconMaster.Common.Tools.csproj",
+        "projectName": "HalconMaster.Common.Tools",
+        "projectPath": "F:\\git\\HalconMaster\\HalconMaster.CN_V1.0\\HalconMaster.Common.Tools\\HalconMaster.Common.Tools.csproj",
+        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
+        "outputPath": "F:\\git\\HalconMaster\\HalconMaster.CN_V1.0\\HalconMaster.Common.Tools\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "E:\\SDK\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0-windows"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0-windows7.0": {
+            "targetAlias": "net8.0-windows",
+            "projectReferences": {
+              "F:\\git\\HalconMaster\\HalconMaster.CN_V1.0\\HalconMaster.Base.Dll\\HalconMaster.Base.Dll.csproj": {
+                "projectPath": "F:\\git\\HalconMaster\\HalconMaster.CN_V1.0\\HalconMaster.Base.Dll\\HalconMaster.Base.Dll.csproj"
+              },
+              "F:\\git\\HalconMaster\\HalconMaster.CN_V1.0\\HalconMaster.Common.Services\\HalconMaster.Common.Services.csproj": {
+                "projectPath": "F:\\git\\HalconMaster\\HalconMaster.CN_V1.0\\HalconMaster.Common.Services\\HalconMaster.Common.Services.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.200"
+      },
+      "frameworks": {
+        "net8.0-windows7.0": {
+          "targetAlias": "net8.0-windows",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WPF": {
+              "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
