@@ -1,22 +1,39 @@
-﻿using System.Windows;
+﻿using System.Globalization;
+using System.Windows;
 using HalconMaster.Common.Model.LangModels;
 
 namespace HalconMaster.Common.Lang;
 
-public class LangManager
-{
-    private static readonly ResourceDictionary ZhCn = new()
-    {
+public class LangManager {
+    public static LangManager Instance { get; set; } = new LangManager();
+
+    private LangManager() {
+    }
+
+    public event LangEventHandler? LanguageChanged;
+
+    private static readonly ResourceDictionary ZhCn = new() {
         Source = new Uri("pack://application:,,,/HalconMaster.Common.Lang;component/Langs/ZH-CN.xaml")
     };
 
-    private static readonly ResourceDictionary EnUs = new()
-    {
+    private static readonly ResourceDictionary EnUs = new() {
         Source = new Uri("pack://application:,,,/HalconMaster.Common.Lang;component/Langs/EN-US.xaml")
     };
 
-    public static void SetLanguage(SystemLanguage lang)
-    {
+    private string? _oldLangName;
+
+    public void SwitchLanguage(string lang) {
+        _oldLangName = CultureInfo.CurrentUICulture.TwoLetterISOLanguageName;
+        CultureInfo.CurrentUICulture = new CultureInfo(lang);
+        SetLanguage(CultureInfo.CurrentUICulture.TwoLetterISOLanguageName switch {
+            "en" => SystemLanguage.EnUs, "zh" => SystemLanguage.ZhCn, _ => throw new ArgumentOutOfRangeException()
+        });
+        LanguageChanged?.Invoke(this,
+            new LangEventArgs(CultureInfo.CurrentUICulture.TwoLetterISOLanguageName, _oldLangName));
+    }
+
+
+    private void SetLanguage(SystemLanguage lang) {
         var resources = Application.Current.Resources.MergedDictionaries;
 
         var findResources = resources.Where(

@@ -18,7 +18,7 @@ public partial class Startup(Application application) : IAppStartup {
     private Application App { get; set; } = application;
 
     public void OnStartUp(StartupEventArgs e) {
-        LangManager.SetLanguage(SystemLanguage.ZhCn);
+        LangManager.Instance.SwitchLanguage("en-us");
         SystemTheme(); 
         Detect(); 
         DispatcherHelper.Initialize();
