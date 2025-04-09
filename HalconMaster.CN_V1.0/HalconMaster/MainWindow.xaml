@@ -4,9 +4,11 @@
                      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
                      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
                      xmlns:local="clr-namespace:HalconMaster" WindowStartupLocation="CenterScreen"
+                     xmlns:vm="clr-namespace:HalconMaster.ViewModels"
+                     d:DataContext="{d:DesignInstance Type=vm:MainWindowViewModel}"
                      mc:Ignorable="d" xmlns:xPrism="clr-namespace:XPrism.Core.DataContextWindow;assembly=XPrism.Core"
                      Title="MainWindow" Height="450" Width="800">
     <Grid>
-
+        <Button Command="{Binding SendCommand}">Send</Button>
     </Grid>
 </xPrism:XPrismWindow>
