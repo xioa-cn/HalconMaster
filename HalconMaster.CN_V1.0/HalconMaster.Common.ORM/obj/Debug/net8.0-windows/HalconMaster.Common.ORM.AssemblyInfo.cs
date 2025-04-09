@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("HalconMaster.Common.ORM")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+43f8548eb9f5427629bdba5a38854bc8a8e28018")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5ff9b6dea8a9865e33cbe0b6cec3c4e1ab4439e2")]
 [assembly: System.Reflection.AssemblyProductAttribute("HalconMaster.Common.ORM")]
 [assembly: System.Reflection.AssemblyTitleAttribute("HalconMaster.Common.ORM")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

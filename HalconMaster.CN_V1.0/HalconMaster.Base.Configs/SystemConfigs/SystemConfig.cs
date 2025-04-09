@@ -1,4 +1,5 @@
-﻿using System.Text.Json.Serialization;
+﻿using System.Configuration;
+using System.Text.Json.Serialization;
 using HalconMaster.Common.Model.ORMModels;
 using HalconMaster.Common.ORM.EFDbContext;
 
@@ -19,6 +20,10 @@ public class SystemConfig {
         if (SystemConfigInstance != null && !string.IsNullOrEmpty(SystemConfigInstance.OrmType))
         {
             BaseDbContext.OrmType = Enum.Parse<OrmType>(SystemConfigInstance.OrmType);
+        }
+        else
+        {
+            throw new InvalidOperationException("未找到数据库类型配置");
         }
     }
 
