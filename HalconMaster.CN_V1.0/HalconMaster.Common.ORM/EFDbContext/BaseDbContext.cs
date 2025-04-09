@@ -1,5 +1,6 @@
 ﻿using System.Reflection;
 using System.Runtime.Loader;
+using HalconMaster.Common.Model.ORMModels;
 using HalconMaster.Common.Tools.LoggerTools;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyModel;
@@ -7,6 +8,8 @@ using Microsoft.Extensions.DependencyModel;
 namespace HalconMaster.Common.ORM.EFDbContext;
 
 public abstract class BaseDbContext : DbContext {
+    public static OrmType OrmType { get; set; } = OrmType.None;
+    
     protected abstract string ConnectionString { get; }
 
     public bool QueryTracking {

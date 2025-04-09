@@ -13,4 +13,9 @@
       </None>
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\HalconMaster.Common.Model\HalconMaster.Common.Model.csproj" />
+      <ProjectReference Include="..\HalconMaster.Common.ORM\HalconMaster.Common.ORM.csproj" />
+    </ItemGroup>
+
 </Project>

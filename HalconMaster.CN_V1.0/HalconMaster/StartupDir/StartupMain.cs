@@ -1,5 +1,6 @@
 ﻿using System.Reflection;
 using System.Windows;
+using HalconMaster.Base.Configs.SystemConfigs;
 using HalconMaster.Common.Lang;
 using HalconMaster.Common.Model.LangModels;
 using HalconMaster.Common.Model.StartupModels;
@@ -20,6 +21,7 @@ public partial class Startup(Application application) : IAppStartup {
 
     public void OnStartUp(StartupEventArgs e) {
         LangManager.Instance.SwitchLanguage("zh-cn");
+        SystemConfig.SetDbType();
         SystemTheme(); 
         Detect(); 
         DispatcherHelper.Initialize();

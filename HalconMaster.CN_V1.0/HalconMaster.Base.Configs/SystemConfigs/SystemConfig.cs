@@ -1,4 +1,6 @@
 ﻿using System.Text.Json.Serialization;
+using HalconMaster.Common.Model.ORMModels;
+using HalconMaster.Common.ORM.EFDbContext;
 
 namespace HalconMaster.Base.Configs.SystemConfigs;
 
@@ -9,17 +11,26 @@ public class SystemConfig {
     [JsonPropertyName("api")] public string? ApiBaseUrl { get; set; }
     [JsonPropertyName("auth")] public string? ViewAuthSwitch { get; set; }
     [JsonPropertyName("useSystemTheme")] public bool UseSystemTheme { get; set; }
+    [JsonPropertyName("ormType")] public string? OrmType { get; set; }
 
     private static SystemConfig? _systemConfig;
+
+    public static void SetDbType() {
+        if (SystemConfigInstance != null && !string.IsNullOrEmpty(SystemConfigInstance.OrmType))
+        {
+            BaseDbContext.OrmType = Enum.Parse<OrmType>(SystemConfigInstance.OrmType);
+        }
+    }
 
     public static SystemConfig? SystemConfigInstance {
         get
         {
             if (_systemConfig != null) return _systemConfig;
             var settingJsonFile =
-                System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Configs","appSettings.json");
+                System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Configs", "appSettings.json");
             var settingJsonString = System.IO.File.ReadAllText(settingJsonFile);
             _systemConfig = System.Text.Json.JsonSerializer.Deserialize<SystemConfig>(settingJsonString);
+
 
             return _systemConfig;
         }
