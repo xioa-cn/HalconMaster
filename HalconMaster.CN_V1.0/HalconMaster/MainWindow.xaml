@@ -1,4 +1,5 @@
 ﻿<xPrism:XPrismWindow x:Class="HalconMaster.MainWindow"
+                     xmlns:nav="clr-namespace:XPrism.Core.Navigations;assembly=XPrism.Core"
                      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
@@ -7,8 +8,10 @@
                      xmlns:vm="clr-namespace:HalconMaster.ViewModels"
                      d:DataContext="{d:DesignInstance Type=vm:MainWindowViewModel}"
                      mc:Ignorable="d" xmlns:xPrism="clr-namespace:XPrism.Core.DataContextWindow;assembly=XPrism.Core"
+                     xmlns:region="clr-namespace:HalconMaster.Common.Model.ViewRegionModels;assembly=HalconMaster.Common.Model"
                      Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <ContentControl nav:RegionManagerProperty.RegionName="{x:Static region:RegionName.MainRegion}" />
         <Button Command="{Binding SendCommand}">Send</Button>
     </Grid>
 </xPrism:XPrismWindow>
