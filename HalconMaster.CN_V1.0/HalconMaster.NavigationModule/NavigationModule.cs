@@ -13,6 +13,6 @@ public class NavigationModule : IModule {
     }
 
     public void OnInitialized(IContainerProvider containerProvider) {
-        throw new NotImplementedException();
+        
     }
 }
