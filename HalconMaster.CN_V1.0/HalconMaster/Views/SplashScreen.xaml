@@ -56,7 +56,7 @@
                     VerticalAlignment="Bottom"
                     FontWeight="Bold"
                     Foreground="#FFF"
-                    Text="2025 © XIOA-ADMIN BY XIOA TEAM." />
+                    Text="2025 © HALCONMASTER BY XIOA TEAM." />
             </Grid>
         </Border>
     </Border>
