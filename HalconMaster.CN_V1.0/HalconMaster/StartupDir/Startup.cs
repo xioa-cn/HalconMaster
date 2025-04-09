@@ -6,12 +6,12 @@ using HalconMaster.ViewModels;
 using HalconMaster.Views;
 using HandyControl.Controls;
 using XPrism.Core.DI;
+using Window = System.Windows.Window;
 
 namespace HalconMaster.StartupDir;
 
 public partial class Startup {
-    private void StartupWindow(Views.SplashScreen splashScreen)
-    {
+    private void StartupWindow(Views.SplashScreen splashScreen) {
         var s = Enum.TryParse<IndexStatus>(SystemConfig.SystemConfigInstance?.IndexStatus, out var indexStatus);
 
         if (!s)
@@ -23,9 +23,7 @@ public partial class Startup {
 
         switch (indexStatus)
         {
-            case IndexStatus.Login:
-            {
-                
+            case IndexStatus.Login: {
                 var vm = XPrismIoc.Fetch<LoginWindowViewModel>();
                 var login = XPrismIoc.Fetch<LoginWindow>();
                 if (login is null) throw new ArgumentNullException(nameof(LoginWindow));
@@ -34,11 +32,10 @@ public partial class Startup {
                 WeakReferenceMessenger.Default.Register<UseIcon>(this, OpenIcon);
                 break;
             }
-            case IndexStatus.Main:
-            {
+            case IndexStatus.Main: {
                 var mainWindow =
                     XPrismIoc.FetchXPrismWindow(nameof(MainWindow));
-                    
+
                 // 直接进入main窗口时 查看上次登录的权限
                 AuthLoaded();
                 splashScreen.SwitchWindow(mainWindow);
@@ -49,8 +46,23 @@ public partial class Startup {
             default:
                 throw new ArgumentOutOfRangeException();
         }
-       
     }
+
+    public static void MainStartup(Window? splashScreen) {
+        var mainWindow =
+            XPrismIoc.FetchXPrismWindow(nameof(MainWindow));
+        if (splashScreen is not null)
+        {
+            splashScreen?.SwitchWindow(mainWindow);
+        }
+        else
+        {
+            mainWindow.ShowWindowWithFade();
+        }
+
+        NotifyIconInitialize();
+    }
+
     private void AuthLoaded() {
         // 在登录记录中查看
     }

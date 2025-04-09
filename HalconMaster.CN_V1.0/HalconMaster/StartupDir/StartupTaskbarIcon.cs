@@ -47,7 +47,7 @@ public partial class Startup {
         NotifyIconInitialize();
     }
     
-    public void NotifyIconInitialize()
+    public static void NotifyIconInitialize()
     {
         if (NotifyViewModel is not null)
             return;
@@ -62,7 +62,7 @@ public partial class Startup {
             Icon = new Icon("Assets/logo/logo.ico"),
             ContextMenu = new ContextMenu()
             {
-                Style = (Style)App.FindResource("Notify")!
+                Style = (Style)Application.Current.FindResource("Notify")!
             },
         };
         _notifyIcon.SetBinding(TaskbarIcon.ToolTipTextProperty, binding);
