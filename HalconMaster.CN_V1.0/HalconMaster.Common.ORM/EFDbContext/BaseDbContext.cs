@@ -9,7 +9,7 @@ namespace HalconMaster.Common.ORM.EFDbContext;
 
 public abstract class BaseDbContext : DbContext {
     public static OrmType OrmType { get; set; } = OrmType.None;
-    
+
     protected abstract string ConnectionString { get; }
 
     public bool QueryTracking {
@@ -54,5 +54,24 @@ public abstract class BaseDbContext : DbContext {
     }
 
     protected void UseDbType(DbContextOptionsBuilder optionsBuilder, string connectionString) {
+        switch (BaseDbContext.OrmType)
+        {
+            case OrmType.Mssql:
+                optionsBuilder.UseSqlServer(connectionString);
+                break;
+            case OrmType.Pgsql:
+                optionsBuilder.UseNpgsql(connectionString);
+                break;
+            case OrmType.Mysql:
+                optionsBuilder.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString));
+                break;
+            case OrmType.Sqlite:
+                optionsBuilder.UseSqlite(connectionString);
+                break;
+            case OrmType.None:
+                break;
+            default:
+                throw new ArgumentOutOfRangeException();
+        }
     }
 }
