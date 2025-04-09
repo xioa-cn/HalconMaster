@@ -24,7 +24,7 @@ public class DynamicResourceEx : DynamicResourceExtension {
             else
             {
                 // 仅支持string 类型默认值
-                throw new TypeUnloadedException(nameof(FallbackValue));
+                throw new ArgumentException(nameof(FallbackValue));
             }
         }
 
