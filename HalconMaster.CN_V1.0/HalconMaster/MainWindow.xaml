@@ -10,8 +10,9 @@
                      mc:Ignorable="d" xmlns:xPrism="clr-namespace:XPrism.Core.DataContextWindow;assembly=XPrism.Core"
                      xmlns:region="clr-namespace:HalconMaster.Common.Model.ViewRegionModels;assembly=HalconMaster.Common.Model"
                      Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <ContentControl nav:RegionManagerProperty.RegionName="{x:Static region:RegionName.MainRegion}" />
-        <Button Command="{Binding SendCommand}">Send</Button>
-    </Grid>
+    <AdornerDecorator>
+        <Grid>
+            <ContentControl nav:RegionManagerProperty.RegionName="{x:Static region:RegionName.MainRegion}" />
+        </Grid>
+    </AdornerDecorator>
 </xPrism:XPrismWindow>

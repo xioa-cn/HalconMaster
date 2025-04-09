@@ -9,6 +9,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\HalconMaster.Base\HalconMaster.Base.csproj" />
+      <ProjectReference Include="..\HalconMaster.NavigationModule\HalconMaster.NavigationModule.csproj" />
     </ItemGroup>
 
     <ItemGroup>
