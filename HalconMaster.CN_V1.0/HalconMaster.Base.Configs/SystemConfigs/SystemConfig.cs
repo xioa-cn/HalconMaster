@@ -5,7 +5,8 @@ using HalconMaster.Common.ORM.EFDbContext;
 
 namespace HalconMaster.Base.Configs.SystemConfigs;
 
-public class SystemConfig {
+public class SystemConfig
+{
     [JsonPropertyName("height")] public double Height { get; set; }
     [JsonPropertyName("width")] public double Width { get; set; }
     [JsonPropertyName("index")] public string? IndexStatus { get; set; }
@@ -14,12 +15,22 @@ public class SystemConfig {
     [JsonPropertyName("useSystemTheme")] public bool UseSystemTheme { get; set; }
     [JsonPropertyName("ormType")] public string? OrmType { get; set; }
 
+    [JsonPropertyName("connectString")] public string? ConnectString { get; set; }
+
     private static SystemConfig? _systemConfig;
 
-    public static void SetDbType() {
+    public static void SetDbType()
+    {
         if (SystemConfigInstance != null && !string.IsNullOrEmpty(SystemConfigInstance.OrmType))
         {
             BaseDbContext.OrmType = Enum.Parse<OrmType>(SystemConfigInstance.OrmType);
+
+            if (string.IsNullOrWhiteSpace(SystemConfigInstance.ConnectString))
+            {
+                throw new ArgumentNullException(nameof(ConnectString));
+            }
+
+            HalconMaster.Common.ORM.EFDbContext.ConnectString.DbConnectString = SystemConfigInstance.ConnectString;
         }
         else
         {
@@ -27,7 +38,8 @@ public class SystemConfig {
         }
     }
 
-    public static SystemConfig? SystemConfigInstance {
+    public static SystemConfig? SystemConfigInstance
+    {
         get
         {
             if (_systemConfig != null) return _systemConfig;
