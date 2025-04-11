@@ -19,14 +19,21 @@ namespace HalconMaster.StartupDir;
 public partial class Startup(Application application) : IAppStartup {
     private Application App { get; set; } = application;
 
+    private static readonly Views.SplashScreen _splashScreen;
+
+    static Startup()
+    {
+        _splashScreen = new Views.SplashScreen();
+        _splashScreen.ShowWindowWithFade();
+    }
+    
     public void OnStartUp(StartupEventArgs e) {
         LangManager.Instance.SwitchLanguage("zh-cn");
         SystemConfig.SetDbType();
         SystemTheme(); 
         Detect(); 
         DispatcherHelper.Initialize();
-        var splashScreen = new Views.SplashScreen();
-        splashScreen.ShowWindowWithFade();
+       
         Task.Run(() =>
         {
             Thread.Sleep(2000);
@@ -53,7 +60,7 @@ public partial class Startup(Application application) : IAppStartup {
                 }
 
                
-                StartupWindow(splashScreen);
+                StartupWindow(_splashScreen);
             });
         });
     }
