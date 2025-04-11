@@ -1,6 +1,5 @@
 ﻿using HalconMaster.Common.ORM.EFDbContext;
 using HalconMaster.Common.ORM.EFDbContext.SystemDb;
-using Microsoft.EntityFrameworkCore;
 using XPrism.Core.DI;
 using XPrism.Core.Modules;
 using XPrism.Core.Modules.Find;
