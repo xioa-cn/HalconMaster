@@ -11,7 +11,7 @@ public abstract class RepositoryBase<TEntity> where TEntity : BaseEntity {
     }
     
     private BaseDbContext DefaultDbContext { get; set; }
-    private BaseDbContext EFContext
+    private BaseDbContext EfContext
     {
         get
         {
@@ -26,6 +26,6 @@ public abstract class RepositoryBase<TEntity> where TEntity : BaseEntity {
     }
     public DbSet<TEntity> DbSet
     {
-        get { return EFContext.Set<TEntity>(); }
+        get { return EfContext.Set<TEntity>(); }
     }
 }
